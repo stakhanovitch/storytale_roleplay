@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Access configparser to load variable values
 from django.utils.six.moves import configparser
 config = configparser.SafeConfigParser(allow_no_value=True)
-config.read(os.path.join(BASE_DIR, 'setup/preprod_setting.cfg'))
+config.read(os.path.join(BASE_DIR, 'setup','preprod_setting.cfg'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
