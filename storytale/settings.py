@@ -15,17 +15,21 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Access configparser to load variable values
+from django.utils.six.moves import configparser
+config = configparser.SafeConfigParser(allow_no_value=True)
+config.read(os.path.join(BASE_DIR, 'setup/preprod_setting.cfg'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'd88k&fxbtg5*p888*!d!ul0hidc%u!2+&6(k0n#p%0^kohi3ki'
+SECRET_KEY = config.get('security', 'SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config.getboolean('general', 'DEBUG')
 
-ALLOWED_HOSTS = ['www.storytale.online','test.storytale.fr']
+ALLOWED_HOSTS = config.get('general', 'ALLOWED_HOSTS').split(",")
 
 
 # Application definition
@@ -54,7 +58,7 @@ ROOT_URLCONF = 'storytale.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,12 +79,12 @@ WSGI_APPLICATION = 'storytale.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'storytale_db',
-        'USER': 'adminprodstorytale',
-        'PASSWORD': 'veziopniozaop_zfanezoioje-fezioC',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': config.get('databases', 'ENGINE'),
+        'NAME': config.get('databases', 'NAME'),
+        'USER': config.get('databases', 'USER'),
+        'PASSWORD': config.get('databases', 'PASSWORD'),
+        'HOST': config.get('databases', 'HOST'),
+        'PORT': config.get('databases', 'PORT'),
     }
 }
 
