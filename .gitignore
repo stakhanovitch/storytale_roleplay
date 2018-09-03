@@ -1,3 +1,18 @@
+# specific to storytale_roleplay project  
+.DS_Store
+.ven
+*.pyc
+.Python
+*.db
+env/*
+.env/*
+*.orig
+.cache
+
+setup/*
+static/*
+image/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
