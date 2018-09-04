@@ -1,0 +1,68 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #888;
+    line-height: 30px;
+    text-align: center;
+}
+
+strong { font-weight: 600; }
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    transition: all .3s;
+}
+
+h1, h2 {
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    color: #555;
+    line-height: 50px;
+}
+
+/* ... jumbotron ... */
+  .bg-cover {
+      background-size: cover;
+      color: white;
+      background-position: center center;
+      position: relative;
+      z-index: -2;
+  }
+  .jumbotron {
+      text-align: center;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+  }
+  
+  .overlay {
+      background-color: #000;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+  }
+
+  .section-container-gray-bg {
+      background: #f8f8f8;
+  }
+  .section-container {
+      margin: 0 auto;
+      padding-bottom: 80px;
+      padding-top: 3rem;
+  }
+
+  .section-description {
+      margin-top: 60px;
+      padding-bottom: 10px;
+  }
+
+  .section-description p {
+      margin-top: 20px;
+      padding: 0 120px;
+  }

@@ -1,0 +1,22 @@
+{% load static %}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home'%}">
+      <img src="{% static "img/storytale.jpg" %}"  height="40" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarResponsive">
+      <ul class="navbar-nav main-menu ">
+      </ul>
+      <span class="navbar-text">
+        Suivez-nous ! &nbsp
+      </span>
+      <form class="form-inline">
+        <a class="btn btn-primary" href="https://www.facebook.com/StorytaleRoleplay/" role="button" >facebook</a>
+      </form>
+    </div>
+  </div>
+</nav>

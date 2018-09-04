@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'public',
+    'bootstrap4',
+    'fontawesome',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +128,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-
+# Additional locations of static files
+STATICFILES_DIRS = (
+    os.path.join('public/static/'),
+)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+MEDIA_URL = '/image/'
+MEDIA_ROOT = os.path.join(BASE_DIR,"image")
