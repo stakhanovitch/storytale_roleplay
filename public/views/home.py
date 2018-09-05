@@ -15,8 +15,8 @@ class HomePageView(TemplateView):
             'meta_description':self.meta_description,
             })
         return context
-    title = 'Storytale, Créez des histoires qui vous ressemblent'
+    title = 'Storytale, Racontez une histoire qui vous ressemble'
     meta_title = title
-    meta_description = ""
+    meta_description = "Nous organisons des ateliers autour du jeu de rôle à destination des maitres du jeu pour les aider à s'améliore tout en se simplifiant la vie"
     workshops = Workshop.objects.all()
     template_name = "public/home.html"

@@ -3,8 +3,10 @@
 {% load static %}
 {% load i18n %}
 
-{% block meta-decription %}
-{% endblock %}
+{% block meta-decription %}{{meta_description}}{% endblock %}
+{% block meta-title %}{{title}}{% endblock  %}
+
+
 
 {% block content %}
 

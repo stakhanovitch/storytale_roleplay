@@ -14,7 +14,7 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PGMDFPT');</script>
+    })(window,document,'script','dataLayer','GTM-KFM5JRV');</script>
 <!-- End Google Tag Manager -->
 
   <meta charset="utf-8">
@@ -51,8 +51,10 @@
   {% endblock %}
 
   <!-- SEO -->
-  <title>{% block meta-title %}{% endblock  %}</title>
+  <title>{% block meta-title %}Storytale, Racontez une histoire qui vous ressemble{% endblock  %}</title>
   <meta name="description" content="{% block meta-decription %}{% endblock meta-decription %}" />
+  <link rel="alternate" href="{% block href_url %}http://www.storytale.fr{{ request.get_full_path }}{% endblock href_url %}" hreflang="fr-fr" />
+
 
 </head>
 <body id="page-top">
