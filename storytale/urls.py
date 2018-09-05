@@ -18,10 +18,22 @@ from django.contrib import admin
 from public.views.home import HomePageView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.sitemaps.views import sitemap
+from public.storytalesitemap import StaticViewSitemap
+from django.contrib.sitemaps import views
 
+
+sitemaps = {
+    'static': StaticViewSitemap,
+}
+
+
+# urls.py
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',  HomePageView.as_view(), name='home'),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},    name='django.contrib.sitemaps.views.sitemap')
 ]
+
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

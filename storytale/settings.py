@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'public',
     'bootstrap4',
     'fontawesome',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +139,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/image/'
 MEDIA_ROOT = os.path.join(BASE_DIR,"image")
+
+SITE_ID = 1
