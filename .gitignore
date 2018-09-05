@@ -1,4 +1,4 @@
-# specific to storytale_roleplay project  
+# specific to storytale_roleplay project
 .DS_Store
 .ven
 *.pyc
@@ -15,7 +15,6 @@ image/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
 *$py.class
 
 # C extensions

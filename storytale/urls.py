@@ -22,6 +22,8 @@ from django.contrib.sitemaps.views import sitemap
 from public.storytalesitemap import StaticViewSitemap
 from django.contrib.sitemaps import views
 
+handler404 = 'public.views.404.handler404'
+handler500 = 'public.views.500.handler500'
 
 sitemaps = {
     'static': StaticViewSitemap,
