@@ -19,5 +19,5 @@ class HomePageView(TemplateView):
     title = 'Storytale, Racontez une histoire qui vous ressemble'
     meta_title = title
     meta_description = "Nous organisons des ateliers autour du jeu de rôle à destination des maitres du jeu pour les aider à s'améliorer tout en leur simplifiant la vie"
-    workshops = Workshop.objects.filter(start_time__gt=timezone.now())
+    workshops = Workshop.objects.filter(start_time__gt=timezone.now()).order_by('start_time')
     template_name = "public/home.html"
