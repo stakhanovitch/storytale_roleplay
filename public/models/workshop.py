@@ -25,7 +25,10 @@ class Workshop(models.Model):
         return self.title
 
     def printed_price(self):
-        return str(self.price) + " €"
+        if self.price == 0:
+            return "Gratuit"
+        else:
+            return str(self.price) + " €"
 
 
     def save(self, *args, **kwargs):
